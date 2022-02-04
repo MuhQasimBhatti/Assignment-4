@@ -1,0 +1,23 @@
+
+//Q3: Write a program that reads 10 integers and store these in array then find the maximum number in array.
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a;
+	int arr[10];
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "enter number" << endl;
+		cin >> a;
+		arr[i] = a;
+	}
+	int max =arr[0];
+	for (int i = 0; i < 10; i++)
+		if (max < arr[i])
+			max = arr[i];
+
+	cout << "The greatest number is " << max << endl;
+}
