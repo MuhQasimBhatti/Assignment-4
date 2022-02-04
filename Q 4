@@ -1,0 +1,27 @@
+
+//Q4: Write a program that reads 10 integers from user and then display the numbers in ascending
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[10];
+	cout << "Enter numbers" << endl;
+	for (int i = 0; i < 10; i++)
+		cin >> arr[i];
+	
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = i; j < 10; j++)
+			if (arr[i] > arr[j])
+			{
+				int a = arr[j];
+				arr[j] = arr[i];
+				arr[i] = a;
+			}
+	}
+	for (int i = 0; i < 10; i++)
+		cout << arr[i] << ", ";
+
+
+}
