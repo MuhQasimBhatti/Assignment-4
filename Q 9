@@ -1,0 +1,19 @@
+//Q9: Declare a character array of size 20. Input the character array from the user.Count the total number of 
+//characters stored in the array.Display the result.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char arr[20];
+	int i = 0;
+	cout << "Enter the sentence" << endl;
+	cin.getline(arr, 20);
+
+	while (arr[i] != '\0')
+		i++;
+	cout << i;
+}
+
+
+
