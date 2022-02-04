@@ -1,0 +1,47 @@
+//Q7: Declare a character array of size 20. Input the character array from the user.
+//Take a character from the user and display the location(s) of that character in the array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char a[20];
+	char letter;
+	int place = 1;
+	int times = 0;
+
+	cout << "Enter a sentence" << endl;
+	cin.getline( a,20);
+
+	cout << "Enter a letter" << endl;
+	cin >> letter;
+
+	//for checking times
+	for (int y = 0; y < 20; y++)
+	{
+		if (letter == a[y])
+			times++;
+	}
+
+	int *arr = new int[times];
+
+
+	//for finding place
+	int i = 0;
+	for (int s = 0; s < times; s++)
+	{
+		while (letter != a[i])
+		{
+			place++;
+			i++;
+		}
+		arr[s] = place;
+		i++;
+		place++;
+	}
+	cout << letter << " is the ";
+	for (int s = 0; s < times; s++)
+		cout << arr[s] << "th,";
+	cout<< " character" << endl;
+}
+
