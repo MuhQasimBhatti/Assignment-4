@@ -1,0 +1,23 @@
+//Q8: Declare two character arrays of size 15. Input first array from the user.Copy the contents of the 
+//first array into the second.
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char frst[15];
+	char scnd[15];
+
+	cout << "Enter the first array" << endl;
+	cin.getline(frst, 15);
+
+	for (int i = 0; i < 15; i++)
+		scnd[i] = frst[i];
+
+	cout << "second array is: " << endl;
+	cout << scnd;
+}
+
+
+
