@@ -1,0 +1,80 @@
+
+/*Q2:  Write a program that creates three arrays; two of size 10 and third of size 20.
+Your program should read 20 integers in first two arrays having size 10.
+After reading integers from user; program should store entered
+integers in third array in way that even number should be in firstand then odd integers.*/
+
+#include <iostream >
+using namespace std;
+
+void main()
+{
+    int frst[10];
+    int scnd[10];
+    int thrd[20];
+
+ 
+    cout << "Enter 10 digits" << endl;
+    for (int i = 0; i < 10; i++)
+        cin >> frst[i];
+    
+    cout << "Again enter 10 digits" << endl;
+    for (int i = 0; i < 10; i++)
+        cin >> scnd[i];
+
+    int i = 0;
+    int j= 0;
+    while (i<10)
+    {
+       if (frst[i] % 2 == 0)
+        {
+            thrd[j] = frst[i];
+            j++;
+        }
+        i++;
+    }
+    i = 0;
+    while (i < 10)
+    {
+        if (scnd[i] % 2 == 0)
+        {
+            thrd[j] = scnd[i];
+            j++;
+        }
+        i++;
+    }
+    i = 0;
+    while (i < 10)
+    {
+        if (scnd[i] % 2 != 0)
+        {
+            thrd[j] = scnd[i];
+            j++;
+        }
+        i++;
+    }
+    i = 0;
+    while (i < 10)
+    {
+        if (scnd[i] % 2 != 0)
+        {
+            thrd[j] = scnd[i];
+            j++;
+        }
+        i++;
+    }
+    cout << "First array" << endl;
+    for (int i = 0; i < 10; i++)
+        cout << frst[i] << ", ";
+    cout << endl;
+    
+    cout << "Second array" << endl;
+    for (int i = 0; i < 10; i++)
+        cout << scnd[i] << ", ";
+    cout << endl;
+    
+    cout << "Third array" << endl;
+    for (int y = 0; y < 20; y++)
+        cout << thrd[y] << ",";
+    cout << endl;
+}
