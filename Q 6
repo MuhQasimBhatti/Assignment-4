@@ -1,0 +1,13 @@
+
+//Q6: Declare a character array of size 20. Input the character array from the user.After the input, display the array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	char arr[20];
+	cout << "Enter a sentence" << endl;
+	cin.getline(arr, 20);
+
+	cout << arr;
+}
